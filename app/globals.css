@@ -16,12 +16,24 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  /* background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb)); */
+@layer base {
+  .bg-gradient {
+    background: rgb(155, 181, 240);
+    background: linear-gradient(156deg, rgba(155, 181, 240, 1) 0%, rgba(120, 167, 230, 1) 25%, rgba(255, 255, 255, 1) 100%);
+    z-index: -1;
+  }
+  .floating-img {
+        animation: float ease-in-out 2000ms infinite;
+    }
+    @keyframes float {
+        0% {
+            margin-top: 0;
+        }
+        50% {
+            margin-top: 1rem;
+        }
+        100% {
+            margin-top: 0%;
+        }
+    }
 }

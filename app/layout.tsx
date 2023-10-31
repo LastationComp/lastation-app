@@ -16,8 +16,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/Icon-dark.png" type="image/x-icon" />
+      </head>
       <body className={poppins.className + ' bg-slate-200 text-black'}>
-        {children}
+        <div className=" p-3  absolute top-0 left-0 bg-gradient w-screen h-screen">{children}</div>
       </body>
     </html>
 
